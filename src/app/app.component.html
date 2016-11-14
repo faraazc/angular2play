@@ -1,3 +1,23 @@
 <h1>
   {{title}}
 </h1>
+
+<simple-tiny
+  [elementId]="'my-editor-id'"
+  (onEditorKeyup)="keyupHandlerFunction($event)"
+  >
+</simple-tiny>
+
+
+<textarea [(ngModel)] = "data.data"> </textarea>
+
+<textarea [(ngModel)] = "data.data"> </textarea>
+
+<button (click) = "update()"></button>
+
+<div [innerHTML]="data.data"></div>
+
+<br>
+<p>
+  {{dyna}}
+</p>
