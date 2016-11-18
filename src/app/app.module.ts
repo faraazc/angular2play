@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { SimpleTinyComponent } from './simple-tiny.component';
 import { SecondcompComponent } from './secondcomp.component';
 import { CommondataserviceService } from './commondataservice.service';
+import { CustompropertybindingComponent } from './custompropertybinding/custompropertybinding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleTinyComponent,
-    SecondcompComponent
+    SecondcompComponent,
+    CustompropertybindingComponent
   ],
   imports: [
     BrowserModule,

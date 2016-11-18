@@ -14,6 +14,7 @@ export class AppComponent {
   dyna:number = 0;
   items:any;
   commonitems:any;
+  name:string = "Farhaan";
 
 constructor(private _zone:NgZone, private dataservice:DataserviceService, 
 private commonservice: CommondataserviceService) {
@@ -38,6 +39,10 @@ private commonservice: CommondataserviceService) {
     console.log(this.data.data);
   }
 
+  fromcustomEvent(content)
+  {
+    alert(content);
+  }
   update() {
     console.log("came here");
     this.data.data =  this.data.data;
