@@ -21,3 +21,32 @@
 <p>
   {{dyna}}
 </p>
+
+<br>
+Insert data
+<br>
+<input type="text" #val>
+<button (click)="addData(val.value)"> add data </button>
+<br><br>
+<button (click)="getData()"> Get data </button>
+<br><br>
+<ul>
+  <li *ngFor="let item of items"> {{item}} </li>
+</ul>
+<p>
+  Common data service in root component
+</p>
+<br>
+Insert data
+<br>
+<input type="text" #common>
+<button (click)="addCommonData(common.value)"> add data </button>
+<br><br>
+<button (click)="getCommonData()"> Get data </button>
+<br><br>
+<ul>
+  <li *ngFor="let commonitem of commonitems"> {{commonitem}} </li>
+</ul>
+
+
+<app-secondcomp></app-secondcomp>

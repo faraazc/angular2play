@@ -1,16 +1,22 @@
 import { Component, NgZone } from '@angular/core';
+import {DataserviceService} from './dataservice.service';
+import { CommondataserviceService } from './commondataservice.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [DataserviceService]
 })
 export class AppComponent {
   title = 'app works!';
   data = {data: 'first text'};
   dyna:number = 0;
+  items:any;
+  commonitems:any;
 
-constructor(private _zone:NgZone) {
+constructor(private _zone:NgZone, private dataservice:DataserviceService, 
+private commonservice: CommondataserviceService) {
   
   this._zone.run(() => { 
     /*
@@ -36,4 +42,27 @@ constructor(private _zone:NgZone) {
     console.log("came here");
     this.data.data =  this.data.data;
   }
+
+  addData(data:any)
+  {
+    console.log("came here");
+    this.dataservice.addData(data);
+  }
+
+  getData()
+  {
+    this.items = this.dataservice.getData().slice(0);
+  }
+
+    addCommonData(data:any)
+  {
+    console.log("came here");
+    this.commonservice.addData(data);
+  }
+
+  getCommonData()
+  {
+    this.commonitems = this.commonservice.getData().slice(0);
+  }
+
 }

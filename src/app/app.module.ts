@@ -5,18 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SimpleTinyComponent } from './simple-tiny.component';
+import { SecondcompComponent } from './secondcomp.component';
+import { CommondataserviceService } from './commondataservice.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleTinyComponent
+    SimpleTinyComponent,
+    SecondcompComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CommondataserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
